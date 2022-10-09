@@ -1,0 +1,44 @@
+@import '../colors';
+@import '../fonts';
+@import '../breakPoints';
+
+.container {
+    background-color: $container;
+    border-radius: 10px;
+    padding: 20px;
+    height: fit-content;
+    width: -webkit-fill-available;
+    box-shadow: 0 9px 14px 0px rgba(0, 0, 0, 0.09);
+    -webkit-box-shadow: 0 9px 14px 0px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0 9px 14px 0px rgba(0, 0, 0, 0.09);
+    .head{
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      & .container-expand-btn{
+        cursor: pointer;
+        transition: fill 0.5s;
+        fill: $text;
+        &:hover{
+          fill: $blueAccent;
+        }
+      }
+      &.open{
+        margin-bottom: 20px;
+        & .container-expand-btn{
+          &:hover{
+            fill: $danger;
+          }
+        }
+      }
+    }
+    & h1 {
+      font-family: $Montserrat;
+      font-weight: 700;
+      color: $title;
+      font-size: 1.2rem;
+      @media screen and (min-width: $meduim) {
+        font-size: 1.4rem;
+      }
+    }
+  }  

@@ -1,0 +1,32 @@
+@import 'colors';
+@import 'fonts';
+@import 'breakPoints';
+
+.appointment-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  @media screen and (min-width:$large) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    position:absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 1280px;
+  }
+
+  & .appointments {
+   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media screen and (min-width:$meduim) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+    }
+  }
+}

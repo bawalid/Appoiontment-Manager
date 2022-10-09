@@ -1,0 +1,79 @@
+@import '../colors';
+@import '../fonts';
+@import '../breakPoints';
+
+.appointment-card,
+.multiple-head {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  &.multiple {
+    flex-direction: column;
+    align-items: flex-start;
+    & .multiple-head {
+      width: -webkit-fill-available;
+      position: relative;
+      & .container-expand-btn{
+        cursor: pointer;
+      }
+    }
+    & .multiple-details {
+      padding-left: 100px;
+      width: -webkit-fill-available;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      & :first-child{
+        margin-top: 5px;
+      }
+      & .group-infos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .infos-name {
+          font-weight: 200;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  & .card-date {
+    display: flex;
+    flex-direction: column;
+    background-color: $blueAccent;
+    border: none;
+    padding: 15px;
+    font-family: $Montserrat;
+    text-align: center;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 50;
+    box-shadow: 0px 4px 14px 0px rgba(78, 137, 250, 0.59);
+    -webkit-box-shadow: 0px 4px 14px 0px rgba(78, 137, 250, 0.59);
+    -moz-box-shadow: 0px 4px 14px 0px rgba(78, 137, 250, 0.59);
+    transition: background-color 0.4s ease-in-out;
+    & .date-day {
+      font-size: 2rem;
+      font-weight: 500;
+      color: $offBlue;
+    }
+
+    & .date-month {
+      color: $offBlue;
+      opacity: 0.8;
+      font-size: 0.55rem;
+      font-weight: 500;
+    }
+  }
+
+  & .card-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    & .infos-name {
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import 'colors';
+@import 'fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $background;
+    font-family: $Montserrat;
+}
+
+#root{
+    padding: 5vh 5vw;
+}
+
+p{
+    color: $text;
+    font-weight: 300;
+}
